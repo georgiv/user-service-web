@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import InputHolder from './components/InputHolder'
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form action="https://google.bg" method="get">
+        <h2>Mimoza</h2>
+        <div class="container">
+          <InputHolder name="uname" type="text" placeholder="Username" />
+          <InputHolder name="psw" type="password" placeholder="Password" />
+          <button type="submit">Login</button>
+        </div>
+      </form>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mimoza-user-service
+  labels:
+    app: mimoza-user-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mimoza-user-service
+  template:
+    metadata:
+      labels:
+        app: mimoza-user-service
+    spec:
+      containers:
+      - name: mimoza-user-service
+        image: cranki/user-service:1.0-alpha
+        ports:
+        - containerPort: 80
